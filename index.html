@@ -29,9 +29,1043 @@
       </header>
       <section>
         <h1>
-<a id="cool-helpers" class="anchor" href="#cool-helpers" aria-hidden="true"><span class="octicon octicon-link"></span></a>cool-helpers</h1>
+<a id="index" class="anchor" href="#index" aria-hidden="true"><span class="octicon octicon-link"></span></a>Index</h1>
 
-<p>Cool Helpers is a Handlebars.js helpers compilation with AMD support.</p>
+<p><strong>Namespaces</strong></p>
+
+<ul>
+<li>
+<a href="#comparison">comparison</a>
+
+<ul>
+<li><a href="#comparison.contains">comparison.contains(str, pattern)</a></li>
+<li><a href="#comparison.and">comparison.and(a, b)</a></li>
+<li><a href="#comparison.gt">comparison.gt(value, test)</a></li>
+<li><a href="#comparison.gte">comparison.gte(value, test)</a></li>
+<li><a href="#comparison.is">comparison.is(value, test)</a></li>
+<li><a href="#comparison.isnt">comparison.isnt(value, test)</a></li>
+<li><a href="#comparison.lt">comparison.lt(value, test)</a></li>
+<li><a href="#comparison.lte">comparison.lte(value, test)</a></li>
+<li><a href="#comparison.or">comparison.or(value, test)</a></li>
+<li><a href="#comparison.ifNth">comparison.ifNth(value, test)</a></li>
+<li><a href="#comparison.compare">comparison.compare(left, operator, right, options)</a></li>
+<li><a href="#comparison.if_eq">comparison.if_eq(context, options)</a></li>
+<li><a href="#comparison.unless_eq">comparison.unless_eq(context, options)</a></li>
+<li><a href="#comparison.if_gt">comparison.if_gt(context, options)</a></li>
+<li><a href="#comparison.unless_gt">comparison.unless_gt(context, options)</a></li>
+<li><a href="#comparison.if_lt">comparison.if_lt(context, options)</a></li>
+<li><a href="#comparison.unless_lt">comparison.unless_lt(context, options)</a></li>
+<li><a href="#comparison.if_gteq">comparison.if_gteq(context, options)</a></li>
+<li><a href="#comparison.unless_gteq">comparison.unless_gteq(context, options)</a></li>
+<li><a href="#comparison.if_lteq">comparison.if_lteq(context, options)</a></li>
+<li><a href="#comparison.unless_lteq">comparison.unless_lteq(context, options)</a></li>
+</ul>
+</li>
+<li>
+<a href="#comparison">comparison</a>
+
+<ul>
+<li><a href="#comparison.contains">comparison.contains(str, pattern)</a></li>
+<li><a href="#comparison.and">comparison.and(a, b)</a></li>
+<li><a href="#comparison.gt">comparison.gt(value, test)</a></li>
+<li><a href="#comparison.gte">comparison.gte(value, test)</a></li>
+<li><a href="#comparison.is">comparison.is(value, test)</a></li>
+<li><a href="#comparison.isnt">comparison.isnt(value, test)</a></li>
+<li><a href="#comparison.lt">comparison.lt(value, test)</a></li>
+<li><a href="#comparison.lte">comparison.lte(value, test)</a></li>
+<li><a href="#comparison.or">comparison.or(value, test)</a></li>
+<li><a href="#comparison.ifNth">comparison.ifNth(value, test)</a></li>
+<li><a href="#comparison.compare">comparison.compare(left, operator, right, options)</a></li>
+<li><a href="#comparison.if_eq">comparison.if_eq(context, options)</a></li>
+<li><a href="#comparison.unless_eq">comparison.unless_eq(context, options)</a></li>
+<li><a href="#comparison.if_gt">comparison.if_gt(context, options)</a></li>
+<li><a href="#comparison.unless_gt">comparison.unless_gt(context, options)</a></li>
+<li><a href="#comparison.if_lt">comparison.if_lt(context, options)</a></li>
+<li><a href="#comparison.unless_lt">comparison.unless_lt(context, options)</a></li>
+<li><a href="#comparison.if_gteq">comparison.if_gteq(context, options)</a></li>
+<li><a href="#comparison.unless_gteq">comparison.unless_gteq(context, options)</a></li>
+<li><a href="#comparison.if_lteq">comparison.if_lteq(context, options)</a></li>
+<li><a href="#comparison.unless_lteq">comparison.unless_lteq(context, options)</a></li>
+</ul>
+</li>
+<li>
+<a href="#date">date</a>
+
+<ul>
+<li><a href="#date.prettifyDate">date.prettifyDate(timestamp, format, errorMsg)</a></li>
+</ul>
+</li>
+<li>
+<a href="#math">math</a>
+
+<ul>
+<li><a href="#math.add">math.add(value, addition)</a></li>
+<li><a href="#math.subtract">math.subtract(value, substraction)</a></li>
+<li><a href="#math.divide">math.divide(value, divisor)</a></li>
+<li><a href="#math.multiply">math.multiply(value, multiplier)</a></li>
+<li><a href="#math.floor">math.floor(value)</a></li>
+<li><a href="#math.ceil">math.ceil(value)</a></li>
+<li><a href="#math.round">math.round(value)</a></li>
+<li><a href="#math.sum">math.sum()</a></li>
+</ul>
+</li>
+</ul>
+
+<p><a name="comparison"></a></p>
+
+<h1>
+<a id="comparison" class="anchor" href="#comparison" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison</h1>
+
+<p>Common helpers set</p>
+
+<p><strong>Members</strong></p>
+
+<ul>
+<li>
+<a href="#comparison">comparison</a>
+
+<ul>
+<li><a href="#comparison.contains">comparison.contains(str, pattern)</a></li>
+<li><a href="#comparison.and">comparison.and(a, b)</a></li>
+<li><a href="#comparison.gt">comparison.gt(value, test)</a></li>
+<li><a href="#comparison.gte">comparison.gte(value, test)</a></li>
+<li><a href="#comparison.is">comparison.is(value, test)</a></li>
+<li><a href="#comparison.isnt">comparison.isnt(value, test)</a></li>
+<li><a href="#comparison.lt">comparison.lt(value, test)</a></li>
+<li><a href="#comparison.lte">comparison.lte(value, test)</a></li>
+<li><a href="#comparison.or">comparison.or(value, test)</a></li>
+<li><a href="#comparison.ifNth">comparison.ifNth(value, test)</a></li>
+<li><a href="#comparison.compare">comparison.compare(left, operator, right, options)</a></li>
+<li><a href="#comparison.if_eq">comparison.if_eq(context, options)</a></li>
+<li><a href="#comparison.unless_eq">comparison.unless_eq(context, options)</a></li>
+<li><a href="#comparison.if_gt">comparison.if_gt(context, options)</a></li>
+<li><a href="#comparison.unless_gt">comparison.unless_gt(context, options)</a></li>
+<li><a href="#comparison.if_lt">comparison.if_lt(context, options)</a></li>
+<li><a href="#comparison.unless_lt">comparison.unless_lt(context, options)</a></li>
+<li><a href="#comparison.if_gteq">comparison.if_gteq(context, options)</a></li>
+<li><a href="#comparison.unless_gteq">comparison.unless_gteq(context, options)</a></li>
+<li><a href="#comparison.if_lteq">comparison.if_lteq(context, options)</a></li>
+<li><a href="#comparison.unless_lteq">comparison.unless_lteq(context, options)</a></li>
+</ul>
+</li>
+</ul>
+
+<p><a name="comparison.contains"></a></p>
+
+<h2>
+<a id="comparisoncontainsstr-pattern" class="anchor" href="#comparisoncontainsstr-pattern" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.contains(str, pattern)</h2>
+
+<p>Conditionally render a block if string matches pattern</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>str <code>string</code> - Value to be compared with pattern<br>
+</li>
+<li>pattern <code>string</code> - Patter which value will be compared to<br>
+</li>
+</ul>
+
+<p><a name="comparison.and"></a></p>
+
+<h2>
+<a id="comparisonanda-b" class="anchor" href="#comparisonanda-b" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.and(a, b)</h2>
+
+<p>Conditionally render a block if both a and b properties exists and are not null or undefined</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>a <code>primitive</code> - first property<br>
+</li>
+<li>b <code>primitive</code> - second property<br>
+</li>
+</ul>
+
+<p><a name="comparison.gt"></a></p>
+
+<h2>
+<a id="comparisongtvalue-test" class="anchor" href="#comparisongtvalue-test" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.gt(value, test)</h2>
+
+<p>Conditionally render a block if value &gt; test</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>value <code>primitive</code> - value to test<br>
+</li>
+<li>test <code>primitive</code> - element with first value will be compared to<br>
+</li>
+</ul>
+
+<p><a name="comparison.gte"></a></p>
+
+<h2>
+<a id="comparisongtevalue-test" class="anchor" href="#comparisongtevalue-test" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.gte(value, test)</h2>
+
+<p>Conditionally render a block if value &gt;= test</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>value <code>primitive</code> - value to test<br>
+</li>
+<li>test <code>primitive</code> - element with first value will be compared to<br>
+</li>
+</ul>
+
+<p><a name="comparison.is"></a></p>
+
+<h2>
+<a id="comparisonisvalue-test" class="anchor" href="#comparisonisvalue-test" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.is(value, test)</h2>
+
+<p>Conditionally render a block if value === test</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>value <code>primitive</code> - value to test<br>
+</li>
+<li>test <code>primitive</code> - element with first value will be compared to<br>
+</li>
+</ul>
+
+<p><a name="comparison.isnt"></a></p>
+
+<h2>
+<a id="comparisonisntvalue-test" class="anchor" href="#comparisonisntvalue-test" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.isnt(value, test)</h2>
+
+<p>Conditionally render a block if value !== test</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>value <code>primitive</code> - value to test<br>
+</li>
+<li>test <code>primitive</code> - element with first value will be compared to<br>
+</li>
+</ul>
+
+<p><a name="comparison.lt"></a></p>
+
+<h2>
+<a id="comparisonltvalue-test" class="anchor" href="#comparisonltvalue-test" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.lt(value, test)</h2>
+
+<p>Conditionally render a block if value &lt; test</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>value <code>primitive</code> - value to test<br>
+</li>
+<li>test <code>primitive</code> - element with first value will be compared to<br>
+</li>
+</ul>
+
+<p><a name="comparison.lte"></a></p>
+
+<h2>
+<a id="comparisonltevalue-test" class="anchor" href="#comparisonltevalue-test" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.lte(value, test)</h2>
+
+<p>Conditionally render a block if value &lt;= test</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>value <code>primitive</code> - value to test<br>
+</li>
+<li>test <code>primitive</code> - element with first value will be compared to<br>
+</li>
+</ul>
+
+<p><a name="comparison.or"></a></p>
+
+<h2>
+<a id="comparisonorvalue-test" class="anchor" href="#comparisonorvalue-test" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.or(value, test)</h2>
+
+<p>Conditionally render a block if a || b</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>value <code>primitive</code> - value to test<br>
+</li>
+<li>test <code>primitive</code> - element with first value will be compared to<br>
+</li>
+</ul>
+
+<p><a name="comparison.ifNth"></a></p>
+
+<h2>
+<a id="comparisonifnthvalue-test" class="anchor" href="#comparisonifnthvalue-test" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.ifNth(value, test)</h2>
+
+<p>Conditionally render a block if nr%v === 0</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>value <code>primitive</code> - value to test<br>
+</li>
+<li>test <code>primitive</code> - eleme<br>
+</li>
+</ul>
+
+<p><a name="comparison.compare"></a></p>
+
+<h2>
+<a id="comparisoncompareleft-operator-right-options" class="anchor" href="#comparisoncompareleft-operator-right-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.compare(left, operator, right, options)</h2>
+
+<p>{{#compare}}...{{/compare}}</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>left  - value<br>
+</li>
+<li>operator  - The operator, must be between quotes "&gt;", "=", "&lt;=", etc...<br>
+</li>
+<li>right  - value<br>
+</li>
+<li>options  - option object sent by handlebars<br>
+</li>
+</ul>
+
+<p><strong>Returns</strong>: <code>String</code> - formatted html<br>
+<a name="comparison.if_eq"></a></p>
+
+<h2>
+<a id="comparisonif_eqcontext-options" class="anchor" href="#comparisonif_eqcontext-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.if_eq(context, options)</h2>
+
+<p>{{if_eq}}</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>context <code>type</code> - [description]<br>
+</li>
+<li>options <code>type</code> - [description]<br>
+</li>
+</ul>
+
+<p><strong>Returns</strong>: <code>type</code> - [description]<br>
+<a name="comparison.unless_eq"></a></p>
+
+<h2>
+<a id="comparisonunless_eqcontext-options" class="anchor" href="#comparisonunless_eqcontext-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.unless_eq(context, options)</h2>
+
+<p>{{unless_eq}}</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>context <code>type</code> - [description]<br>
+</li>
+<li>options <code>type</code> - [description]<br>
+</li>
+</ul>
+
+<p><strong>Returns</strong>: <code>type</code> - [description]<br>
+<a name="comparison.if_gt"></a></p>
+
+<h2>
+<a id="comparisonif_gtcontext-options" class="anchor" href="#comparisonif_gtcontext-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.if_gt(context, options)</h2>
+
+<p>{{if_gt}}</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>context <code>type</code> - [description]<br>
+</li>
+<li>options <code>type</code> - [description]<br>
+</li>
+</ul>
+
+<p><strong>Returns</strong>: <code>type</code> - [description]<br>
+<a name="comparison.unless_gt"></a></p>
+
+<h2>
+<a id="comparisonunless_gtcontext-options" class="anchor" href="#comparisonunless_gtcontext-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.unless_gt(context, options)</h2>
+
+<p>{{unless_gt}}</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>context <code>type</code> - [description]<br>
+</li>
+<li>options <code>type</code> - [description]<br>
+</li>
+</ul>
+
+<p><strong>Returns</strong>: <code>type</code> - [description]<br>
+<a name="comparison.if_lt"></a></p>
+
+<h2>
+<a id="comparisonif_ltcontext-options" class="anchor" href="#comparisonif_ltcontext-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.if_lt(context, options)</h2>
+
+<p>{{if_lt}}</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>context <code>type</code> - [description]<br>
+</li>
+<li>options <code>type</code> - [description]<br>
+</li>
+</ul>
+
+<p><strong>Returns</strong>: <code>type</code> - [description]<br>
+<a name="comparison.unless_lt"></a></p>
+
+<h2>
+<a id="comparisonunless_ltcontext-options" class="anchor" href="#comparisonunless_ltcontext-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.unless_lt(context, options)</h2>
+
+<p>{{unless_lt}}</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>context <code>type</code> - [description]<br>
+</li>
+<li>options <code>type</code> - [description]<br>
+</li>
+</ul>
+
+<p><strong>Returns</strong>: <code>type</code> - [description]<br>
+<a name="comparison.if_gteq"></a></p>
+
+<h2>
+<a id="comparisonif_gteqcontext-options" class="anchor" href="#comparisonif_gteqcontext-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.if_gteq(context, options)</h2>
+
+<p>{{if_gteq}}</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>context <code>type</code> - [description]<br>
+</li>
+<li>options <code>type</code> - [description]<br>
+</li>
+</ul>
+
+<p><strong>Returns</strong>: <code>type</code> - [description]<br>
+<a name="comparison.unless_gteq"></a></p>
+
+<h2>
+<a id="comparisonunless_gteqcontext-options" class="anchor" href="#comparisonunless_gteqcontext-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.unless_gteq(context, options)</h2>
+
+<p>{{unless_gteq}}</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>context <code>type</code> - [description]<br>
+</li>
+<li>options <code>type</code> - [description]<br>
+</li>
+</ul>
+
+<p><strong>Returns</strong>: <code>type</code> - [description]<br>
+<a name="comparison.if_lteq"></a></p>
+
+<h2>
+<a id="comparisonif_lteqcontext-options" class="anchor" href="#comparisonif_lteqcontext-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.if_lteq(context, options)</h2>
+
+<p>{{if_lteq}}</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>context <code>type</code> - [description]<br>
+</li>
+<li>options <code>type</code> - [description]<br>
+</li>
+</ul>
+
+<p><strong>Returns</strong>: <code>type</code> - [description]<br>
+<a name="comparison.unless_lteq"></a></p>
+
+<h2>
+<a id="comparisonunless_lteqcontext-options" class="anchor" href="#comparisonunless_lteqcontext-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.unless_lteq(context, options)</h2>
+
+<p>{{unless_lteq}}</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>context <code>type</code> - [description]<br>
+</li>
+<li>options <code>type</code> - [description]<br>
+</li>
+</ul>
+
+<p><strong>Returns</strong>: <code>type</code> - [description]<br>
+<a name="comparison"></a></p>
+
+<h1>
+<a id="comparison-1" class="anchor" href="#comparison-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison</h1>
+
+<p>Comparsion helpers set</p>
+
+<p><strong>Members</strong></p>
+
+<ul>
+<li>
+<a href="#comparison">comparison</a>
+
+<ul>
+<li><a href="#comparison.contains">comparison.contains(str, pattern)</a></li>
+<li><a href="#comparison.and">comparison.and(a, b)</a></li>
+<li><a href="#comparison.gt">comparison.gt(value, test)</a></li>
+<li><a href="#comparison.gte">comparison.gte(value, test)</a></li>
+<li><a href="#comparison.is">comparison.is(value, test)</a></li>
+<li><a href="#comparison.isnt">comparison.isnt(value, test)</a></li>
+<li><a href="#comparison.lt">comparison.lt(value, test)</a></li>
+<li><a href="#comparison.lte">comparison.lte(value, test)</a></li>
+<li><a href="#comparison.or">comparison.or(value, test)</a></li>
+<li><a href="#comparison.ifNth">comparison.ifNth(value, test)</a></li>
+<li><a href="#comparison.compare">comparison.compare(left, operator, right, options)</a></li>
+<li><a href="#comparison.if_eq">comparison.if_eq(context, options)</a></li>
+<li><a href="#comparison.unless_eq">comparison.unless_eq(context, options)</a></li>
+<li><a href="#comparison.if_gt">comparison.if_gt(context, options)</a></li>
+<li><a href="#comparison.unless_gt">comparison.unless_gt(context, options)</a></li>
+<li><a href="#comparison.if_lt">comparison.if_lt(context, options)</a></li>
+<li><a href="#comparison.unless_lt">comparison.unless_lt(context, options)</a></li>
+<li><a href="#comparison.if_gteq">comparison.if_gteq(context, options)</a></li>
+<li><a href="#comparison.unless_gteq">comparison.unless_gteq(context, options)</a></li>
+<li><a href="#comparison.if_lteq">comparison.if_lteq(context, options)</a></li>
+<li><a href="#comparison.unless_lteq">comparison.unless_lteq(context, options)</a></li>
+</ul>
+</li>
+</ul>
+
+<p><a name="comparison.contains"></a></p>
+
+<h2>
+<a id="comparisoncontainsstr-pattern-1" class="anchor" href="#comparisoncontainsstr-pattern-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.contains(str, pattern)</h2>
+
+<p>Conditionally render a block if string matches pattern</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>str <code>string</code> - Value to be compared with pattern<br>
+</li>
+<li>pattern <code>string</code> - Patter which value will be compared to<br>
+</li>
+</ul>
+
+<p><a name="comparison.and"></a></p>
+
+<h2>
+<a id="comparisonanda-b-1" class="anchor" href="#comparisonanda-b-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.and(a, b)</h2>
+
+<p>Conditionally render a block if both a and b properties exists and are not null or undefined</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>a <code>primitive</code> - first property<br>
+</li>
+<li>b <code>primitive</code> - second property<br>
+</li>
+</ul>
+
+<p><a name="comparison.gt"></a></p>
+
+<h2>
+<a id="comparisongtvalue-test-1" class="anchor" href="#comparisongtvalue-test-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.gt(value, test)</h2>
+
+<p>Conditionally render a block if value &gt; test</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>value <code>primitive</code> - value to test<br>
+</li>
+<li>test <code>primitive</code> - element with first value will be compared to<br>
+</li>
+</ul>
+
+<p><a name="comparison.gte"></a></p>
+
+<h2>
+<a id="comparisongtevalue-test-1" class="anchor" href="#comparisongtevalue-test-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.gte(value, test)</h2>
+
+<p>Conditionally render a block if value &gt;= test</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>value <code>primitive</code> - value to test<br>
+</li>
+<li>test <code>primitive</code> - element with first value will be compared to<br>
+</li>
+</ul>
+
+<p><a name="comparison.is"></a></p>
+
+<h2>
+<a id="comparisonisvalue-test-1" class="anchor" href="#comparisonisvalue-test-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.is(value, test)</h2>
+
+<p>Conditionally render a block if value === test</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>value <code>primitive</code> - value to test<br>
+</li>
+<li>test <code>primitive</code> - element with first value will be compared to<br>
+</li>
+</ul>
+
+<p><a name="comparison.isnt"></a></p>
+
+<h2>
+<a id="comparisonisntvalue-test-1" class="anchor" href="#comparisonisntvalue-test-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.isnt(value, test)</h2>
+
+<p>Conditionally render a block if value !== test</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>value <code>primitive</code> - value to test<br>
+</li>
+<li>test <code>primitive</code> - element with first value will be compared to<br>
+</li>
+</ul>
+
+<p><a name="comparison.lt"></a></p>
+
+<h2>
+<a id="comparisonltvalue-test-1" class="anchor" href="#comparisonltvalue-test-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.lt(value, test)</h2>
+
+<p>Conditionally render a block if value &lt; test</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>value <code>primitive</code> - value to test<br>
+</li>
+<li>test <code>primitive</code> - element with first value will be compared to<br>
+</li>
+</ul>
+
+<p><a name="comparison.lte"></a></p>
+
+<h2>
+<a id="comparisonltevalue-test-1" class="anchor" href="#comparisonltevalue-test-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.lte(value, test)</h2>
+
+<p>Conditionally render a block if value &lt;= test</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>value <code>primitive</code> - value to test<br>
+</li>
+<li>test <code>primitive</code> - element with first value will be compared to<br>
+</li>
+</ul>
+
+<p><a name="comparison.or"></a></p>
+
+<h2>
+<a id="comparisonorvalue-test-1" class="anchor" href="#comparisonorvalue-test-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.or(value, test)</h2>
+
+<p>Conditionally render a block if a || b</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>value <code>primitive</code> - value to test<br>
+</li>
+<li>test <code>primitive</code> - element with first value will be compared to<br>
+</li>
+</ul>
+
+<p><a name="comparison.ifNth"></a></p>
+
+<h2>
+<a id="comparisonifnthvalue-test-1" class="anchor" href="#comparisonifnthvalue-test-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.ifNth(value, test)</h2>
+
+<p>Conditionally render a block if nr%v === 0</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>value <code>primitive</code> - value to test<br>
+</li>
+<li>test <code>primitive</code> - eleme<br>
+</li>
+</ul>
+
+<p><a name="comparison.compare"></a></p>
+
+<h2>
+<a id="comparisoncompareleft-operator-right-options-1" class="anchor" href="#comparisoncompareleft-operator-right-options-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.compare(left, operator, right, options)</h2>
+
+<p>{{#compare}}...{{/compare}}</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>left  - value<br>
+</li>
+<li>operator  - The operator, must be between quotes "&gt;", "=", "&lt;=", etc...<br>
+</li>
+<li>right  - value<br>
+</li>
+<li>options  - option object sent by handlebars<br>
+</li>
+</ul>
+
+<p><strong>Returns</strong>: <code>String</code> - formatted html<br>
+<a name="comparison.if_eq"></a></p>
+
+<h2>
+<a id="comparisonif_eqcontext-options-1" class="anchor" href="#comparisonif_eqcontext-options-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.if_eq(context, options)</h2>
+
+<p>{{if_eq}}</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>context <code>type</code> - [description]<br>
+</li>
+<li>options <code>type</code> - [description]<br>
+</li>
+</ul>
+
+<p><strong>Returns</strong>: <code>type</code> - [description]<br>
+<a name="comparison.unless_eq"></a></p>
+
+<h2>
+<a id="comparisonunless_eqcontext-options-1" class="anchor" href="#comparisonunless_eqcontext-options-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.unless_eq(context, options)</h2>
+
+<p>{{unless_eq}}</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>context <code>type</code> - [description]<br>
+</li>
+<li>options <code>type</code> - [description]<br>
+</li>
+</ul>
+
+<p><strong>Returns</strong>: <code>type</code> - [description]<br>
+<a name="comparison.if_gt"></a></p>
+
+<h2>
+<a id="comparisonif_gtcontext-options-1" class="anchor" href="#comparisonif_gtcontext-options-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.if_gt(context, options)</h2>
+
+<p>{{if_gt}}</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>context <code>type</code> - [description]<br>
+</li>
+<li>options <code>type</code> - [description]<br>
+</li>
+</ul>
+
+<p><strong>Returns</strong>: <code>type</code> - [description]<br>
+<a name="comparison.unless_gt"></a></p>
+
+<h2>
+<a id="comparisonunless_gtcontext-options-1" class="anchor" href="#comparisonunless_gtcontext-options-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.unless_gt(context, options)</h2>
+
+<p>{{unless_gt}}</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>context <code>type</code> - [description]<br>
+</li>
+<li>options <code>type</code> - [description]<br>
+</li>
+</ul>
+
+<p><strong>Returns</strong>: <code>type</code> - [description]<br>
+<a name="comparison.if_lt"></a></p>
+
+<h2>
+<a id="comparisonif_ltcontext-options-1" class="anchor" href="#comparisonif_ltcontext-options-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.if_lt(context, options)</h2>
+
+<p>{{if_lt}}</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>context <code>type</code> - [description]<br>
+</li>
+<li>options <code>type</code> - [description]<br>
+</li>
+</ul>
+
+<p><strong>Returns</strong>: <code>type</code> - [description]<br>
+<a name="comparison.unless_lt"></a></p>
+
+<h2>
+<a id="comparisonunless_ltcontext-options-1" class="anchor" href="#comparisonunless_ltcontext-options-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.unless_lt(context, options)</h2>
+
+<p>{{unless_lt}}</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>context <code>type</code> - [description]<br>
+</li>
+<li>options <code>type</code> - [description]<br>
+</li>
+</ul>
+
+<p><strong>Returns</strong>: <code>type</code> - [description]<br>
+<a name="comparison.if_gteq"></a></p>
+
+<h2>
+<a id="comparisonif_gteqcontext-options-1" class="anchor" href="#comparisonif_gteqcontext-options-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.if_gteq(context, options)</h2>
+
+<p>{{if_gteq}}</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>context <code>type</code> - [description]<br>
+</li>
+<li>options <code>type</code> - [description]<br>
+</li>
+</ul>
+
+<p><strong>Returns</strong>: <code>type</code> - [description]<br>
+<a name="comparison.unless_gteq"></a></p>
+
+<h2>
+<a id="comparisonunless_gteqcontext-options-1" class="anchor" href="#comparisonunless_gteqcontext-options-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.unless_gteq(context, options)</h2>
+
+<p>{{unless_gteq}}</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>context <code>type</code> - [description]<br>
+</li>
+<li>options <code>type</code> - [description]<br>
+</li>
+</ul>
+
+<p><strong>Returns</strong>: <code>type</code> - [description]<br>
+<a name="comparison.if_lteq"></a></p>
+
+<h2>
+<a id="comparisonif_lteqcontext-options-1" class="anchor" href="#comparisonif_lteqcontext-options-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.if_lteq(context, options)</h2>
+
+<p>{{if_lteq}}</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>context <code>type</code> - [description]<br>
+</li>
+<li>options <code>type</code> - [description]<br>
+</li>
+</ul>
+
+<p><strong>Returns</strong>: <code>type</code> - [description]<br>
+<a name="comparison.unless_lteq"></a></p>
+
+<h2>
+<a id="comparisonunless_lteqcontext-options-1" class="anchor" href="#comparisonunless_lteqcontext-options-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>comparison.unless_lteq(context, options)</h2>
+
+<p>{{unless_lteq}}</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>context <code>type</code> - [description]<br>
+</li>
+<li>options <code>type</code> - [description]<br>
+</li>
+</ul>
+
+<p><strong>Returns</strong>: <code>type</code> - [description]<br>
+<a name="date"></a></p>
+
+<h1>
+<a id="date" class="anchor" href="#date" aria-hidden="true"><span class="octicon octicon-link"></span></a>date</h1>
+
+<p>Date helpers set</p>
+
+<p><strong>Members</strong></p>
+
+<ul>
+<li>
+<a href="#date">date</a>
+
+<ul>
+<li><a href="#date.prettifyDate">date.prettifyDate(timestamp, format, errorMsg)</a></li>
+</ul>
+</li>
+</ul>
+
+<p><a name="date.prettifyDate"></a></p>
+
+<h2>
+<a id="dateprettifydatetimestamp-format-errormsg" class="anchor" href="#dateprettifydatetimestamp-format-errormsg" aria-hidden="true"><span class="octicon octicon-link"></span></a>date.prettifyDate(timestamp, format, errorMsg)</h2>
+
+<p>[prettifyDate description]</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>timestamp <code>timestamp</code> - Date in timestamp format<br>
+</li>
+<li>format <code>string</code> - Date format<br>
+</li>
+<li>errorMsg <code>string</code> - Error message key<br>
+</li>
+</ul>
+
+<p><a name="math"></a></p>
+
+<h1>
+<a id="math" class="anchor" href="#math" aria-hidden="true"><span class="octicon octicon-link"></span></a>math</h1>
+
+<p>Math helpers set</p>
+
+<p><strong>Members</strong></p>
+
+<ul>
+<li>
+<a href="#math">math</a>
+
+<ul>
+<li><a href="#math.add">math.add(value, addition)</a></li>
+<li><a href="#math.subtract">math.subtract(value, substraction)</a></li>
+<li><a href="#math.divide">math.divide(value, divisor)</a></li>
+<li><a href="#math.multiply">math.multiply(value, multiplier)</a></li>
+<li><a href="#math.floor">math.floor(value)</a></li>
+<li><a href="#math.ceil">math.ceil(value)</a></li>
+<li><a href="#math.round">math.round(value)</a></li>
+<li><a href="#math.sum">math.sum()</a></li>
+</ul>
+</li>
+</ul>
+
+<p><a name="math.add"></a></p>
+
+<h2>
+<a id="mathaddvalue-addition" class="anchor" href="#mathaddvalue-addition" aria-hidden="true"><span class="octicon octicon-link"></span></a>math.add(value, addition)</h2>
+
+<p>Returns value + addition</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>value <code>number</code> - [description]<br>
+</li>
+<li>addition <code>number</code> - [description]<br>
+</li>
+</ul>
+
+<p><a name="math.subtract"></a></p>
+
+<h2>
+<a id="mathsubtractvalue-substraction" class="anchor" href="#mathsubtractvalue-substraction" aria-hidden="true"><span class="octicon octicon-link"></span></a>math.subtract(value, substraction)</h2>
+
+<p>Returns value - substraction</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>value <code>number</code> - [description]<br>
+</li>
+<li>substraction <code>number</code> - [description]<br>
+</li>
+</ul>
+
+<p><a name="math.divide"></a></p>
+
+<h2>
+<a id="mathdividevalue-divisor" class="anchor" href="#mathdividevalue-divisor" aria-hidden="true"><span class="octicon octicon-link"></span></a>math.divide(value, divisor)</h2>
+
+<p>Returns value % divisor</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>value <code>number</code> - [description]<br>
+</li>
+<li>divisor <code>number</code> - [description]<br>
+</li>
+</ul>
+
+<p><a name="math.multiply"></a></p>
+
+<h2>
+<a id="mathmultiplyvalue-multiplier" class="anchor" href="#mathmultiplyvalue-multiplier" aria-hidden="true"><span class="octicon octicon-link"></span></a>math.multiply(value, multiplier)</h2>
+
+<p>Returns value * multiplier</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>value <code>number</code> - [description]<br>
+</li>
+<li>multiplier <code>number</code> - [description]<br>
+</li>
+</ul>
+
+<p><a name="math.floor"></a></p>
+
+<h2>
+<a id="mathfloorvalue" class="anchor" href="#mathfloorvalue" aria-hidden="true"><span class="octicon octicon-link"></span></a>math.floor(value)</h2>
+
+<p>Returns Math.floor(value)</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>value <code>number</code> - [description]<br>
+</li>
+</ul>
+
+<p><a name="math.ceil"></a></p>
+
+<h2>
+<a id="mathceilvalue" class="anchor" href="#mathceilvalue" aria-hidden="true"><span class="octicon octicon-link"></span></a>math.ceil(value)</h2>
+
+<p>Returns Math.celi(value)</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>value <code>number</code> - [description]<br>
+</li>
+</ul>
+
+<p><a name="math.round"></a></p>
+
+<h2>
+<a id="mathroundvalue" class="anchor" href="#mathroundvalue" aria-hidden="true"><span class="octicon octicon-link"></span></a>math.round(value)</h2>
+
+<p>Returns Math.round(value)</p>
+
+<p><strong>Params</strong></p>
+
+<ul>
+<li>value <code>number</code> - [description]<br>
+</li>
+</ul>
+
+<p><a name="math.sum"></a></p>
+
+<h2>
+<a id="mathsum" class="anchor" href="#mathsum" aria-hidden="true"><span class="octicon octicon-link"></span></a>math.sum()</h2>
+
+<p>Returns sum of each argument</p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/bq">bq</a></p>
