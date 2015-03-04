@@ -1,0 +1,22 @@
+{
+  "name": "cool-helpers",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bq/cool-helpers.git"
+  },
+  "contributors": [
+    "Álvaro Brito <alvaro.brito@bq.com>",
+    "Óscar Ferrándiz <oscar.ferrandiz@bq.com>"
+  ],
+  "description": "Cool Helpers is a Handlebars.js helpers compilation with AMD support",
+  "devDependencies": {
+    "grunt-bump": "^0.3.0",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-uglify": "^0.7.0",
+    "grunt-conventional-changelog": "^1.1.0",
+    "grunt-preprocess": "^4.1.0",
+    "grunt-readme-generator": "^0.3.41",
+    "load-grunt-tasks": "^3.1.0"
+  }
+}
