@@ -1,7 +1,7 @@
 To start using cool-helpers you can:
 
 * [Download the last release](https://github.com/bq/cool-helpers/releases/tag/v0.0.2)
-* [Install with bower](http://bower.io/): `bower install cool-helpers --save--dev`
+* [Install with bower](http://bower.io/): `bower install cool-helpers --save-dev`
 
 ###Build the project
 
