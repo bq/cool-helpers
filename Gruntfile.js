@@ -16,6 +16,7 @@ module.exports = function(grunt) {
                     readme_folder: 'doc'
                 },
                 order: {
+                    'quickstart.md': 'Quickstart',
                     'usage.md': 'Usage',
                     'commons.md': 'Commons',
                     'comparison.md': 'Comparison',
