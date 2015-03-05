@@ -5,8 +5,8 @@
         'cool-helpers'
       ],
       paths: {
-        'cool-helpers': 'path:bower-components/cool-helpers/lib/cool-helpers',
-        handlebars: 'path/bower_components/handlebars/handlebars',
-        moment: 'path/bower_components/moment/moment'
+        'cool-helpers': 'bower_components/cool-helpers/lib/cool-helpers',
+        handlebars: 'bower_components/handlebars/handlebars',
+        moment: 'bower_components/moment/moment'
       }      
     });
