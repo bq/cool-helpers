@@ -8,7 +8,9 @@ notifications:
     on_failure: never
 before_install: npm install -g grunt-cli
 install: npm install
-script: grunt build
+script:
+    - npm test
+    - npm build
 branches:
   only:
   - master
