@@ -10,7 +10,7 @@ before_install: npm install -g grunt-cli
 install: npm install
 script:
     - npm test
-    - npm build
+    - grunt build
 branches:
   only:
   - master
