@@ -95,22 +95,5 @@ var math = {
      */
     round: function(value) {
         return Math.round(value);
-    },
-
-    /**
-     * Returns sum of each argument
-     * @memberof math
-     *
-     * {{sum 3 5 10 7}}
-     */
-    sum: function() {
-        var args = _.flatten(arguments);
-        var sum = 0;
-        var i = args.length - 1;
-        while (i--) {
-            sum += _.parseInt(args[i]) || 0;
-        }
-        return Number(sum);
     }
-
 };

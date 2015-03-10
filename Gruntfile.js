@@ -26,11 +26,16 @@ module.exports = function(grunt) {
             }
         },
         preprocess: {
-            options: {},
             helpers: {
                 src: 'src/start.js',
                 dest: 'lib/cool-helpers.js'
             }
+        },
+        mochacli: {
+            options: {
+                bail: true
+            },
+            all: ['test/spec/*.js']
         },
         uglify: {
             dist: {
@@ -81,10 +86,14 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('build', [
-        'preprocess',
+        'preprocess:helpers',
         'concat',
         'uglify',
         'readme_generator'
+    ]);
+
+    grunt.registerTask('test', [
+        'mochacli'
     ]);
 
     grunt.registerTask('release', function(version) {

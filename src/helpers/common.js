@@ -5,63 +5,6 @@
 var common = {
 
     /**
-     * Generates data-attributes for context value
-     * @memberof common
-     * @param  {string} context [description]
-     *
-     * @example
-     *
-     * {{#data}}
-     * {{/data}}
-     */
-    data: function(context) {
-        if (context) {
-            return ' data-' + context.type + '="' + context.value + '"';
-        }
-        return '';
-    },
-
-    /**
-     * Generates data-attributes for each context value
-     * @memberof common
-     * @param  {string} context [description]
-     *
-     * @example
-     *
-     * {{#datas attrs}}
-     * {{/datas}}
-     */
-    datas: function(context) {
-        var output = '';
-        for (var attr in context) {
-            if (context.hasOwnProperty(attr)) {
-                output += ' data-' + context[attr].type + '="' + context[attr].value + '"';
-            }
-        }
-        return output;
-    },
-
-    /**
-     * Generates attributes for context value
-     * @memberof common
-     * @param  {string} context [description]
-     *
-     * @example
-     *
-     * {{#attributes attrs}}
-     * {{/attributes}}
-     */
-    attributes: function(context) {
-        var output = '';
-        for (var attr in context) {
-            if (context.hasOwnProperty(attr)) {
-                output += attr + '="' + context[attr] + '"';
-            }
-        }
-        return output;
-    },
-
-    /**
      * Generates a new helper with name key
      * @memberof common
      * @param  {string} name Helper name
