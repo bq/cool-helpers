@@ -37,6 +37,9 @@ module.exports = function(grunt) {
             },
             all: ['test/spec/*.js']
         },
+        clean: {
+            lib: ['lib', 'README.md']
+        },
         uglify: {
             dist: {
                 files: {
@@ -86,6 +89,7 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('build', [
+        'clean',
         'preprocess:helpers',
         'concat',
         'uglify',
