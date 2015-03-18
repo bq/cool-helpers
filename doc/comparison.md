@@ -8,6 +8,38 @@ Conditionally render a block if string matches pattern
         text
     {{/contains}}
 
+###isEmpty
+
+Conditionally render a block if array list is empty
+
+    {{#isEmpty list }}
+        text
+    {{/isEmpty}}
+
+###isntEmpty
+
+Conditionally render a block if array list inst empty
+
+    {{#isntEmpty list }}
+        text
+    {{/isntEmpty}}
+
+###isUndefined
+
+Conditionally render a block if if obj is undefined
+
+    {{#isUndefined obj }}
+        text
+    {{/isUndefined}}
+
+###exists
+
+Conditionally render a block if obj exists
+
+    {{#exists obj }}
+        text
+    {{/exists}}
+
 ###and
 
 Conditionally render a block if both a and b properties exists and are not null or undefined
