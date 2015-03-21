@@ -10,15 +10,19 @@ describe('Commons helpers', function() {
             expect(Handlebars.helpers.mymacro).to.be.a('function');
         });
 
-        it('should use the created helper', function() {
+    });
+
+    describe('nl2br', function() {
+
+        it('should add a <br> at the end of the text', function() {
             var data = {
-                    option: 'text'
+                    text: 'text\n'
                 },
-                hbs = '{{mymacro options=option}}';
+                hbs = '{{nl2br text}}';
 
             template = Handlebars.compile(hbs);
 
-            expect(template(data)).to.be.equal('text');
+            expect(template(data)).to.be.contain('text<br>');
         });
 
     });
