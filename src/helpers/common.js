@@ -2,6 +2,16 @@
  * Common helpers set
  * @namespace comparison
  */
+
+
+function extend() {
+    for (var i = 1; i < arguments.length; i++)
+        for (var key in arguments[i])
+            if (arguments[i].hasOwnProperty(key))
+                arguments[0][key] = arguments[i][key];
+    return arguments[0];
+}
+
 var common = {
 
     /**
@@ -16,12 +26,12 @@ var common = {
      *     {{/each}}
      * {{/macro}}
      *
-     * {{mymacro options=options}
+     * {{mymacro options=options}}
      *
      */
     macro: function(name, defaults) {
         Handlebars.registerHelper(name, function(options) {
-            var e = $.extend(this, defaults.hash, options.hash);
+            var e = extend(this, defaults.hash, options.hash);
             return new Handlebars.SafeString(defaults.fn(e));
         });
     },
@@ -32,7 +42,7 @@ var common = {
      * @param  {string} text Text to apply nl2br
      *
      * @example
-     * {{#nl2br title}}{{/nl2br}}
+     * {{nl2br title}}
      */
     nl2br: function(text) {
         var nl2br = (text + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + '<br>' + '$2');
@@ -44,7 +54,7 @@ var common = {
      * @memberof common
      *
      * @example
-     * {{#log title}}{{/log}}
+     * {{log value}}
      */
     log: function() {
         console.log(['Values:'].concat(
@@ -58,7 +68,7 @@ var common = {
      * @memberof common
      *
      * @example
-     * {{#debug title}}{{/debug}}
+     * {{debug value1 value2}}
      */
     debug: function() {
         console.log('Context:', this);
