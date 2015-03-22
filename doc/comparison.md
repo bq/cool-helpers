@@ -52,7 +52,7 @@ Conditionally render a block if both a and b properties exists and are not null 
 
 Conditionally render a block if value > test
 
-    {{#@gt 5 2}}
+    {{#gt 5 2}}
         text
     {/gt}}
 
@@ -60,7 +60,7 @@ Conditionally render a block if value > test
 
 Conditionally render a block if value >= test
 
-    {{#@gte 5 2}}
+    {{#gte 5 2}}
         text
     {/gte}}
 
@@ -68,7 +68,7 @@ Conditionally render a block if value >= test
 
 Conditionally render a block if value === test
 
-    {{#@is 5 5}}
+    {{#is 5 5}}
         text
     {/is}}
 
@@ -76,7 +76,7 @@ Conditionally render a block if value === test
 
 Conditionally render a block if value !== test
 
-    {{#@isnt 5 5}}
+    {{#isnt 5 5}}
         text
     {/isnt}}
 
@@ -84,7 +84,7 @@ Conditionally render a block if value !== test
 
 Conditionally render a block if value < test
 
-    {{#@lt 5 2}}
+    {{#lt 5 2}}
         text
     {/lt}}
 
@@ -92,7 +92,7 @@ Conditionally render a block if value < test
 
 Conditionally render a block if value <= test
 
-    {{#@lte 5 2}}
+    {{#lte 5 2}}
         text
     {/lte}}
 
@@ -100,7 +100,7 @@ Conditionally render a block if value <= test
 
 Conditionally render a block if a || b
 
-    {{#@or a b}}
+    {{#or a b}}
         text
     {/or}}
 
@@ -125,16 +125,5 @@ Compares two values with given operator. Operators are: ==, ===, !=, !==, <, >, 
     {{else}}
         The value is lower than 10
     {{/compare}}
-
-
-
-
-
-
-
-
-
-
-
 
 
