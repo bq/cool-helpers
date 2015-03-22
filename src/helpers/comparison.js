@@ -109,9 +109,8 @@ var comparison = {
     and: function(a, b, options) {
         if (a && b) {
             return options.fn(this);
-        } else {
-            return options.inverse(this);
         }
+        return options.inverse(this);
     },
 
     /**
@@ -122,16 +121,15 @@ var comparison = {
      *
      * @example
      *
-     * {{#@gt 5 2}}
+     * {{#gt 5 2}}
      *     text
      * {{/gt}}
      */
     gt: function(value, test, options) {
         if (value > test) {
             return options.fn(this);
-        } else {
-            return options.inverse(this);
         }
+        return options.inverse(this);
     },
 
     /**
@@ -149,9 +147,8 @@ var comparison = {
     gte: function(value, test, options) {
         if (value >= test) {
             return options.fn(this);
-        } else {
-            return options.inverse(this);
         }
+        return options.inverse(this);
     },
 
     /**
@@ -169,9 +166,8 @@ var comparison = {
     is: function(value, test, options) {
         if (value === test) {
             return options.fn(this);
-        } else {
-            return options.inverse(this);
         }
+        return options.inverse(this);
     },
 
     /**
@@ -189,9 +185,8 @@ var comparison = {
     isnt: function(value, test, options) {
         if (value !== test) {
             return options.fn(this);
-        } else {
-            return options.inverse(this);
         }
+        return options.inverse(this);
     },
 
     /**
@@ -209,9 +204,8 @@ var comparison = {
     lt: function(value, test, options) {
         if (value < test) {
             return options.fn(this);
-        } else {
-            return options.inverse(this);
         }
+        return options.inverse(this);
     },
 
     /**
@@ -229,9 +223,8 @@ var comparison = {
     lte: function(value, test, options) {
         if (value <= test) {
             return options.fn(this);
-        } else {
-            return options.inverse(this);
         }
+        return options.inverse(this);
     },
 
     /**
@@ -249,9 +242,8 @@ var comparison = {
     or: function(a, b, options) {
         if (a || b) {
             return options.fn(this);
-        } else {
-            return options.inverse(this);
         }
+        return options.inverse(this);
     },
 
     /**
@@ -270,9 +262,8 @@ var comparison = {
         v = v + 1;
         if (v % nr === 0) {
             return options.fn(this);
-        } else {
-            return options.inverse(this);
         }
+        return options.inverse(this);
     },
 
     /**
