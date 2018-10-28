@@ -20,11 +20,11 @@ To start using cool-helpers you can:
 * [Download the last release](https://github.com/bq/cool-helpers/releases/tag/v0.0.2)
 * [Install with bower](http://bower.io/): `bower install cool-helpers --save-dev`
 
-###Build the project
+### Build the project
 
 If you want to build the project locally, you have to run the [Grunt](http://gruntjs.com/) task `grunt build`. This task will concat and minify the sources and create the README.md. Before all this, you do not forget to run `npm install` and `bower install`. 
 
-####Contribute
+#### Contribute
 
 If you want to keep growing cool-helpers up, send us a pull request with your new helpers. You must follow this steps:
 
@@ -56,25 +56,25 @@ If you want to keep growing cool-helpers up, send us a pull request with your ne
 
 > Commons
 
-###data
+### data
 
 > Generates data-attribute from context.type and context.value
 
     {{#data attribute}}{{/data}}
 
-###datas
+### datas
 
 > Generates data-attributes from context.type and context.value
 
     {{#datas attributes}}{{/datas}}
 
-###attributes
+### attributes
 
 > Generates data-attribute from context.type and context.value
 
     {{#attributes attributes}}{{/attributes}}
 
-###macro
+### macro
 
 > Generates a new helper with name key
 
@@ -85,19 +85,19 @@ If you want to keep growing cool-helpers up, send us a pull request with your ne
      
     {{mymacro options=options}
 
-###nl2br
+### nl2br
 
 > Changes each nl to a br tag
 
     {{#nl2br title}}{{/nl2br}}
 
-###log
+### log
 
 > Log one or multiple values to the console:
 
     {{#log title}}{{/log}}
 
-###debug
+### debug
 
 > Log one or multiple values to the console, with the current context:
 
@@ -109,7 +109,7 @@ If you want to keep growing cool-helpers up, send us a pull request with your ne
 
 > Comparison
 
-###contains
+### contains
 
 Conditionally render a block if string matches pattern
 
@@ -117,7 +117,7 @@ Conditionally render a block if string matches pattern
         text
     {{/contains}}
 
-###isEmpty
+### isEmpty
 
 Conditionally render a block if array list is empty
 
@@ -125,7 +125,7 @@ Conditionally render a block if array list is empty
         text
     {{/isEmpty}}
 
-###isntEmpty
+### isntEmpty
 
 Conditionally render a block if array list inst empty
 
@@ -133,7 +133,7 @@ Conditionally render a block if array list inst empty
         text
     {{/isntEmpty}}
 
-###isUndefined
+### isUndefined
 
 Conditionally render a block if if obj is undefined
 
@@ -141,7 +141,7 @@ Conditionally render a block if if obj is undefined
         text
     {{/isUndefined}}
 
-###exists
+### exists
 
 Conditionally render a block if obj exists
 
@@ -149,7 +149,7 @@ Conditionally render a block if obj exists
         text
     {{/exists}}
 
-###and
+### and
 
 Conditionally render a block if both a and b properties exists and are not null or undefined
 
@@ -157,7 +157,7 @@ Conditionally render a block if both a and b properties exists and are not null 
         text
     {{/and}}
 
-###gt
+### gt
 
 Conditionally render a block if value > test
 
@@ -165,7 +165,7 @@ Conditionally render a block if value > test
         text
     {/gt}}
 
-###gte
+### gte
 
 Conditionally render a block if value >= test
 
@@ -173,7 +173,7 @@ Conditionally render a block if value >= test
         text
     {/gte}}
 
-###is
+### is
 
 Conditionally render a block if value === test
 
@@ -181,7 +181,7 @@ Conditionally render a block if value === test
         text
     {/is}}
 
-###isnt
+### isnt
 
 Conditionally render a block if value !== test
 
@@ -189,7 +189,7 @@ Conditionally render a block if value !== test
         text
     {/isnt}}
 
-###lt
+### lt
 
 Conditionally render a block if value < test
 
@@ -197,7 +197,7 @@ Conditionally render a block if value < test
         text
     {/lt}}
 
-###lte
+### lte
 
 Conditionally render a block if value <= test
 
@@ -205,7 +205,7 @@ Conditionally render a block if value <= test
         text
     {/lte}}
 
-###or
+### or
 
 Conditionally render a block if a || b
 
@@ -213,7 +213,7 @@ Conditionally render a block if a || b
         text
     {/or}}
 
-###ifNth
+### ifNth
 
 Conditionally render a block if nr%v === 0
 
@@ -221,7 +221,7 @@ Conditionally render a block if nr%v === 0
         text
     {{/ifNth}}
 
-###compare 
+### compare 
 
 Compares two values with given operator. Operators are: ==, ===, !=, !==, <, >, <=, >=, typeof. Operator must be between quotes "";
 
@@ -254,49 +254,49 @@ Compares two values with given operator. Operators are: ==, ===, !=, !==, <, >, 
 
 > Math
 
-###add
+### add
 
 > Returns value + adition
 
     {{add 5 1}}
 
-###substract
+### substract
 
 > Returns value - substraction
 
     {{substract 5 1}}
 
-###divide
+### divide
 
 > Returns value % divisor
 
     {{divide 6 3}}
 
-###multiply
+### multiply
 
 > Returns value * multiplier
 
     {{multiply 5 2}}
 
-###floor
+### floor
 
 Returns Math.floor(value)
 
     {{floor 3.2222}}
 
-###ceil
+### ceil
 
 Returns Math.ceil(value)
 
     {{ceil 3.2222}}
 
-###round
+### round
 
 Returns Math.round(value)
 
     {{round 3.2222}}
 
-###sum
+### sum
 
 Returns sum of each argument
 
@@ -312,13 +312,13 @@ Returns sum of each argument
 
 > Date
 
-###formatDate
+### formatDate
 
 > Formats date in given format
 
     {{formatDate date 'yyyy/mm/dd'}}
 
-###subtractDate
+### subtractDate
 
 > Returns the difference between two dates in given format
 
